@@ -54,7 +54,7 @@ COPY ./Magento-Starter /var/www/html/magento2/
 
 #RUN chmod -R 755 /var/www/html/magento2/
  
-RUN service mysql restart && service apache2 restart && cd /var/www/html/magento2 && bin/magento setup:install  
+RUN service mysql restart && service apache2 restart && cd /var/www/html/magento2 && bin/magento setup:install \
     --db-host=localhost --db-name=magento --db-user=magento2user --db-password=abcd1234 \
     --admin-firstname=Admin --admin-lastname=User --admin-email=admin@example.com \
     --admin-user=admin --admin-password=admin123\
